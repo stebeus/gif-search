@@ -10,18 +10,19 @@
 		<script type="module" src="/index.js"></script>
 	</head>
 	<body>
-		<div id="root" class="stack">
-			<header class="stack">
+		<div id="root" class="center-xy stack">
+			<header class="center-xy stack">
 				<h1>GIF Search</h1>
-				<div class="search">
+				<div class="search interactive">
 					<svg class="svg-icon" width="24" height="24" role="presentation">
 						<use href="/icons.svg#search-icon" />
 					</svg>
+					<hr class="vr">
 					<input type="search" id="query" placeholder="Search KLIPY">
 				</div>
 			</header>
-			<main class="stack">
-				<div class="img-wrapper card stack">
+			<main class="center-xy stack">
+				<div class="gif-wrapper card center-xy stack">
 					<img class="gif" src="" alt="GIF" width="160" height="160">
 					<a class="watermark" href="https://klipy.com/" target="_blank" rel="noopener noreferrer">
 						<img src="/images/klipy-watermark.png" alt="KLIPY website" width="118" height="20">
@@ -29,13 +30,14 @@
 				</div>
 				<h2></h2>
 			</main>
-			<footer>
-				<p class="copyright">
+			<footer class="center-xy">
+				<p>
 					© Stebeus 2026.
 					<a href="https://opensource.org/license/mit" target="_blank" rel="noopener noreferrer"
 						>MIT License</a
 					>
 				</p>
+				<hr class="vr">
 				<a href="https://github.com/stebeus" target="_blank" rel="noopener noreferrer">
 					<svg class="svg-icon" width="24" height="24">
 						<title>GitHub</title>

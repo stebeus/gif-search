@@ -1,3 +1,12 @@
+/* CSS DIRECTORY
+	1. TOKENS
+	2. UTILITIES
+	3. BASE
+	4. COMPONENTS
+*/
+
+/* || TOKENS */
+
 :root {
 	/* Borders */
 	--border: 1px solid var(--color-border);
@@ -33,10 +42,27 @@
 	}
 }
 
+/* || UTILITIES */
+
 .card {
-	padding: var(--size-l);
+	padding: var(--size-m);
 	border: var(--border);
 	border-radius: var(--size-xs);
+}
+
+.center-xy {
+	place-content: center;
+	place-items: center;
+}
+
+.interactive {
+	&:hover {
+		background-color: var(--color-border);
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--color-content);
+	}
 }
 
 .stack {
@@ -44,10 +70,15 @@
 	flex-direction: column;
 }
 
+.vr {
+	min-height: 1em;
+	border-left: var(--border);
+}
+
+/* || BASE */
+
 #root {
 	gap: var(--size-xxl);
-	align-items: center;
-	justify-content: center;
 	font: var(--font-p);
 	color: var(--color-contentMuted);
 	background-color: var(--color-base);
@@ -66,53 +97,53 @@ h2 {
 	font: var(--font-h2);
 }
 
+/* || COMPONENTS */
+
 header {
 	gap: var(--size-xxs);
-	align-items: center;
 }
 
 .search {
 	display: flex;
 	gap: var(--size-s);
-	max-width: fit-content;
 	padding: var(--size-xs) var(--size-s);
 	border: var(--border);
 	border-radius: var(--size-xs);
 }
 
 main {
-	gap: var(--size-xs);
-	align-items: center;
+	gap: var(--size-xxs);
 
 	h2 {
 		text-align: center;
 	}
 }
 
-.img-wrapper {
+.gif {
+	width: 100%;
+	border-radius: var(--size-xxs);
+}
+
+.gif-wrapper {
 	gap: var(--size-xs);
-	align-items: center;
-	justify-items: center;
 	min-width: 240px;
-	max-width: 75vw;
+	max-width: 80vw;
 
 	&:has([src='/images/sonic-waiting.gif'], [src='/images/sonic-ring.gif']) {
+		.gif {
+			image-rendering: pixelated;
+		}
+
 		.watermark {
 			display: none;
 		}
 	}
 }
 
-.gif {
-	width: 100%;
-	image-rendering: pixelated;
-	border-radius: var(--size-xxs);
-}
-
 footer {
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	gap: var(--size-s);
+	padding: 2rem;
 
 	a:hover {
 		color: var(--color-content);
@@ -125,10 +156,4 @@ footer {
 			transform: rotate(1turn);
 		}
 	}
-}
-
-.copyright::after {
-	margin: 0 var(--size-s);
-	content: '';
-	border-left: var(--border);
 }

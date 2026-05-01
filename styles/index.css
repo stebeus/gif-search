@@ -34,7 +34,7 @@
 }
 
 .card {
-	padding: var(--size-m);
+	padding: var(--size-l);
 	border: var(--border);
 	border-radius: var(--size-xs);
 }
@@ -84,32 +84,35 @@ main {
 	gap: var(--size-xs);
 	align-items: center;
 
-	.img-wrapper {
-		justify-items: center;
-		min-width: 240px;
-		max-width: 75vw;
-	}
-
-	.gif {
-		width: 100%;
-		border-radius: var(--size-xxs);
-	}
-
 	h2 {
 		text-align: center;
 	}
+}
+
+.img-wrapper {
+	gap: var(--size-xs);
+	align-items: center;
+	justify-items: center;
+	min-width: 240px;
+	max-width: 75vw;
+
+	&:has([src='/images/sonic-waiting.gif'], [src='/images/sonic-ring.gif']) {
+		.watermark {
+			display: none;
+		}
+	}
+}
+
+.gif {
+	width: 100%;
+	image-rendering: pixelated;
+	border-radius: var(--size-xxs);
 }
 
 footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
-	.copyright::after {
-		margin: 0 var(--size-s);
-		content: '';
-		border-left: var(--border);
-	}
 
 	a:hover {
 		color: var(--color-content);
@@ -122,4 +125,10 @@ footer {
 			transform: rotate(1turn);
 		}
 	}
+}
+
+.copyright::after {
+	margin: 0 var(--size-s);
+	content: '';
+	border-left: var(--border);
 }

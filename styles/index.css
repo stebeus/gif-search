@@ -61,6 +61,7 @@ h2 {
 }
 
 header {
+	gap: var(--size-xs);
 	align-items: center;
 }
 

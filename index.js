@@ -56,3 +56,4 @@ async function handleQuery(event) {
 }
 
 searchInput.addEventListener('submit', handleQuery);
+renderGif();

@@ -1,4 +1,4 @@
-const searchInput = document.querySelector('.search-input');
+const searchInput = document.querySelector('.search');
 const initialGifPath = '/images/sonic-waiting.gif';
 
 const isEmpty = (query) => query.trim() === '';

@@ -17,6 +17,13 @@
 	--size-xl: 1.5rem;
 	--size-xxl: 2rem;
 
+	/* Typography */
+	--ff-sans: system-ui, sans-serif;
+
+	--font-p: 400 var(--size-m) var(--ff-sans);
+	--font-h2: 500 1.125rem var(--ff-sans);
+	--font-h1: 700 var(--size-xxl) var(--ff-sans);
+
 	/* Light theme */
 	@media (prefers-color-scheme: light) {
 		--color-base: oklch(1 0 0);

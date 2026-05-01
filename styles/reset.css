@@ -42,6 +42,14 @@ html {
 
 ::file-selector-button,
 button,
+input:is([type='checkbox'], [type='radio']),
+label,
+select {
+	cursor: pointer;
+}
+
+::file-selector-button,
+button,
 input {
 	background-color: transparent;
 }

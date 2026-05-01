@@ -1,0 +1,7 @@
+:root {
+	/* Colors */
+	--color-base: oklch(0.175 0 0);
+	--color-border: oklch(from var(--color-base) calc(l + 0.125) c h);
+	--color-content: oklch(0.95 0 0);
+	--color-contentMuted: oklch(from var(--color-content) calc(l - 0.25) c h);
+}

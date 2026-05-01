@@ -33,6 +33,11 @@
 	}
 }
 
+.card {
+	padding: var(--size-xl);
+	border: var(--border);
+}
+
 .stack {
 	display: flex;
 	flex-direction: column;

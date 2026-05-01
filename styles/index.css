@@ -1,4 +1,7 @@
 :root {
+	/* Borders */
+	--border: 1px solid var(--border);
+
 	/* Colors */
 	--color-base: oklch(0.175 0 0);
 	--color-border: oklch(from var(--color-base) calc(l + 0.125) c h);

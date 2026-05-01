@@ -39,6 +39,7 @@
 }
 
 #root {
+	gap: var(--size-xxl);
 	align-items: center;
 	justify-content: center;
 	font: var(--font-p);

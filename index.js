@@ -54,3 +54,5 @@ async function handleQuery(event) {
 	} = await fetchGif(query);
 	renderGif(title, url);
 }
+
+searchInput.addEventListener('submit', handleQuery);

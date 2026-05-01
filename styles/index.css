@@ -64,6 +64,14 @@ header {
 	align-items: center;
 }
 
+.search {
+	display: flex;
+	gap: var(--size-s);
+	max-width: fit-content;
+	padding: var(--size-xs) var(--size-s);
+	border: var(--border);
+}
+
 main {
 	align-items: center;
 }

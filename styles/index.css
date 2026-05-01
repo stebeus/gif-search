@@ -16,7 +16,6 @@
 	--color-border: oklch(from var(--color-base) calc(l + 0.125) c h);
 	--color-content: oklch(0.95 0 0);
 	--color-contentMuted: oklch(from var(--color-content) calc(l - 0.25) c h);
-	--color-hover: white;
 
 	/* Sizing */
 	--size-xxs: 0.25rem;
@@ -40,7 +39,6 @@
 		--color-border: oklch(from var(--color-base) calc(l - 0.125) c h);
 		--color-content: oklch(0.175 0 0);
 		--color-contentMuted: oklch(from var(--color-content) calc(l + 0.25) c h);
-		--color-hover: black;
 	}
 }
 
@@ -57,8 +55,18 @@
 	place-items: center;
 }
 
-.interactive:hover {
-	background-color: color-mix(in oklch, var(--color-base), var(--color-hover) 5%);
+.interactive {
+	--color-hover: white;
+
+	cursor: pointer;
+
+	@media (prefers-color-scheme: light) {
+		--color-hover: black;
+	}
+
+	&:hover {
+		background-color: color-mix(in oklch, var(--color-base), var(--color-hover) 5%);
+	}
 }
 
 .stack {

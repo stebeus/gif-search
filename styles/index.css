@@ -32,3 +32,9 @@
 		--color-contentMuted: oklch(from var(--color-content) calc(l + 0.25) c h);
 	}
 }
+
+#root {
+	font: var(--font-p);
+	color: var(--color-contentMuted);
+	background-color: var(--color-base);
+}

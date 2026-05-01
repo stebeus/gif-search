@@ -58,3 +58,7 @@ h1 {
 h2 {
 	font: var(--font-h2);
 }
+
+header {
+	align-items: center;
+}

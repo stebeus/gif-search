@@ -99,7 +99,7 @@ header {
 	gap: var(--size-xxs);
 }
 
-.search {
+.search-box {
 	display: flex;
 	gap: var(--size-s);
 	padding: var(--size-xs) var(--size-s);

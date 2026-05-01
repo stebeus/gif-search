@@ -1,4 +1,6 @@
-const searchInput = document.querySelector('.search');
+const searchBox = document.querySelector('.search-box');
+const queryInput = document.querySelector('#query');
+
 const initialGifPath = '/images/sonic-waiting.gif';
 
 const isEmpty = (query) => query.trim() === '';
@@ -30,7 +32,7 @@ async function fetchGif(gif) {
 }
 
 async function handleQuery() {
-	const query = document.querySelector('#query').value;
+	const query = queryInput.value;
 
 	if (isEmpty(query)) {
 		renderGif();
@@ -51,5 +53,7 @@ async function handleQuery() {
 	renderGif(title, url);
 }
 
-searchInput.addEventListener('change', handleQuery);
+searchBox.addEventListener('click', () => queryInput.focus());
+searchBox.addEventListener('change', handleQuery);
+
 renderGif();

@@ -10,8 +10,8 @@
 		<script type="module" src="/index.js"></script>
 	</head>
 	<body>
-		<div id="root">
-			<header>
+		<div id="root" class="stack">
+			<header class="stack">
 				<h1>GIF Search</h1>
 				<div class="search">
 					<svg class="svg-icon" width="24" height="24" role="presentation">
@@ -20,11 +20,13 @@
 					<input type="search" id="query" placeholder="Search KLIPY">
 				</div>
 			</header>
-			<main>
-				<img class="gif" src="" alt="GIF" width="160" height="160">
-				<a class="watermark" href="https://klipy.com/" target="_blank" rel="noopener noreferrer">
-					<img src="/images/klipy-watermark.png" alt="KLIPY website" width="100" height="34">
-				</a>
+			<main class="stack">
+				<div class="img-wrapper card stack">
+					<img class="gif" src="" alt="GIF" width="160" height="160">
+					<a class="watermark" href="https://klipy.com/" target="_blank" rel="noopener noreferrer">
+						<img src="/images/klipy-watermark.png" alt="KLIPY website" width="160" height="34">
+					</a>
+				</div>
 				<h2></h2>
 			</main>
 			<footer>

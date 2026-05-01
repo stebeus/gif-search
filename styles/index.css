@@ -90,6 +90,11 @@ main {
 		min-width: 240px;
 		max-width: 75vw;
 	}
+
+	.gif {
+		width: 100%;
+		border-radius: var(--radius);
+	}
 }
 
 footer {

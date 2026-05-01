@@ -84,6 +84,12 @@ header {
 main {
 	gap: var(--size-xs);
 	align-items: center;
+
+	.img-wrapper {
+		justify-items: center;
+		min-width: 240px;
+		max-width: 75vw;
+	}
 }
 
 footer {

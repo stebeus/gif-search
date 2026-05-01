@@ -33,6 +33,11 @@
 	}
 }
 
+.stack {
+	display: flex;
+	flex-direction: column;
+}
+
 #root {
 	font: var(--font-p);
 	color: var(--color-contentMuted);

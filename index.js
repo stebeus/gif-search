@@ -28,3 +28,29 @@ async function fetchGif(gif) {
 		console.error(error);
 	}
 }
+
+async function handleQuery(event) {
+	event.preventDefault();
+
+	const query = document.querySelector('#query').value;
+
+	searchInput.reset();
+
+	if (isEmpty(query)) {
+		renderGif();
+		return;
+	}
+
+	const loaderPath = '/images/sonic-ring.gif';
+	renderGif('Loading...', loaderPath);
+
+	const {
+		title,
+		file: {
+			hd: {
+				gif: { url },
+			},
+		},
+	} = await fetchGif(query);
+	renderGif(title, url);
+}

@@ -39,6 +39,8 @@
 }
 
 #root {
+	align-items: center;
+	justify-content: center;
 	font: var(--font-p);
 	color: var(--color-contentMuted);
 	background-color: var(--color-base);

@@ -66,3 +66,27 @@ header {
 main {
 	align-items: center;
 }
+
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.copyright::after {
+		margin: 0 var(--size-s);
+		content: '';
+		border-left: var(--border);
+	}
+
+	a:hover {
+		color: var(--color-content);
+	}
+
+	a:has(.svg-icon) {
+		transition: transform 750ms;
+
+		&:hover {
+			transform: rotate(1turn);
+		}
+	}
+}

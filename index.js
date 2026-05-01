@@ -10,3 +10,21 @@ function renderGif(title = "I'm waiting for you...", url) {
 	gifTitle.textContent = title;
 	gif.src = url;
 }
+
+async function fetchGif(gif) {
+	const key = '6OXtOEb9inKrHI7HYhBObJYoDTLSpfN139Gm6AXrX4l96Tb4IbPJ6vIczCDg6PRp';
+	const url = `https://api.klipy.com/api/v1/${key}/gifs/search?per_page=8&q=${gif}&format_filter=gif`;
+
+	try {
+		const response = await fetch(url);
+		const {
+			data: {
+				data: [data],
+			},
+		} = await response.json();
+
+		return data;
+	} catch (error) {
+		console.error(error);
+	}
+}

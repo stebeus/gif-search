@@ -29,12 +29,8 @@ async function fetchGif(gif) {
 	}
 }
 
-async function handleQuery(event) {
-	event.preventDefault();
-
+async function handleQuery() {
 	const query = document.querySelector('#query').value;
-
-	searchInput.reset();
 
 	if (isEmpty(query)) {
 		renderGif();
@@ -55,5 +51,5 @@ async function handleQuery(event) {
 	renderGif(title, url);
 }
 
-searchInput.addEventListener('submit', handleQuery);
+searchInput.addEventListener('change', handleQuery);
 renderGif();

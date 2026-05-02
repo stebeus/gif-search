@@ -145,7 +145,7 @@ main {
 	min-width: 240px;
 	max-width: 80vw;
 
-	&:has([src='/images/sonic-waiting.gif'], [src='/images/sonic-ring.gif']) {
+	&:has([src='../images/sonic-waiting.gif'], [src='../images/sonic-ring.gif']) {
 		.gif {
 			image-rendering: pixelated;
 		}

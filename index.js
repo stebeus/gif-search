@@ -1,7 +1,7 @@
 const searchBox = document.querySelector('.search-box');
 const queryInput = document.querySelector('#query');
 
-const initialGifPath = '../images/sonic-waiting.gif';
+const initialGifPath = 'images/sonic-waiting.gif';
 
 const isEmpty = (query) => query.trim() === '';
 
@@ -39,7 +39,7 @@ async function handleQuery() {
 		return;
 	}
 
-	const loaderPath = '../images/sonic-ring.gif';
+	const loaderPath = 'images/sonic-ring.gif';
 	renderGif('Loading...', loaderPath);
 
 	const {
